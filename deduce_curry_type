@@ -1,0 +1,5 @@
+curry f = \x y -> f (x, y)
+Type of curry is:
+curry :: ((a, b) -> c) -> a -> b -> c
+Value for: curry fst 'a' 1
+'a'
