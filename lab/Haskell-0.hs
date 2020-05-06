@@ -79,7 +79,9 @@ ghci> chr 65
 'A' -}
 
 codeCezar :: String -> Int -> String
-codeCezar = undefined
+codeCezar word shift = map (chr . (doShift shift) . ord) word
+                       where doShift shift val | val >= 65 && val <= 90 = 65 + (mod (val + shift - 65) 26)
+                                               | val >= 97 && val <= 122 = 97 + (mod (val + shift - 97) 26)
 
 decodeCezar :: String -> Int -> String
-decodeCezar = undefined
+decodeCezar word shift = undefined
