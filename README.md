@@ -1,1 +1,1 @@
-# spop2020
+# Test preparation for Formal Specifications and functional programs class
