@@ -1,0 +1,6 @@
+1) f  :: a -> a
+f a = a
+
+2) f' :: (a,b) -> (b,a)
+f' (a, b) = (b, a)
+f' x = (snd x, fst x)
