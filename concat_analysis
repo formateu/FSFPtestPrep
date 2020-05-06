@@ -1,0 +1,14 @@
+[] ++ ys     = ys
+(x:xs) ++ ys = x : (xs ++ ys)
+
+Complexity of ++ operator is O(N), where N = length (x:xs)
+
+// Q: Would it be better if concat operator is left associative or right associative?
+
+                        ("abc" ++ "de") ++ "fg" 1)
+"abc" ++ "de" ++ "fg" =
+                        "abc" ++ ("de" ++ "fg") 2)
+
+A: Right associative, because of string lenghts in this case:
+1) 3 + 5 = 8 recursive calls
+2) 2 + 3 = 5 recursive calls
